@@ -1,0 +1,118 @@
+table {
+  border-collapse: collapse;
+  page-break-inside: avoid;
+  page-break-before:auto;
+}
+tr.trHeaderClass,
+tr.trInnerClass {
+    border: 2px solid black;
+}
+.act-title{
+  font-weight: bold;
+}
+tr th,
+tr td{
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.scores input[type=checkbox]{
+  display: none;
+}
+
+.scores .checkbox-wrapper{
+  text-align: center;
+}
+.scores .checkbox-wrapper-3,
+.scores .checkbox-wrapper-4{
+  border-right: 0;
+}
+.scores label {
+  padding: 3px 5px;
+  background: #ddd;
+  border-radius: 3px;
+  border: 1px solid #888;
+  white-space: nowrap;
+  line-height: 2;
+  margin: 0 3px;
+}
+.scores input:checked +label{
+  background: red;
+}
+.scores{
+  text-align: center;
+}
+.scoreWrapper{
+  display: inline;
+}
+@media print {
+  .scores .checkbox-wrapper {
+    border-right: 1px solid black;
+}
+  .save-button,
+  .clear-button,
+  #csvCheckboxes{
+    display: none;
+  }
+
+table{
+  font-size: 12px;
+}
+
+
+  table { page-break-inside:auto }
+tr    { page-break-inside:avoid; page-break-after:auto }
+thead { display:table-header-group }
+tfoot { display:table-footer-group }
+
+input:placeholder-shown {
+    display: none;
+}
+
+  .scores {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr min-content;
+    gap: 0px 0px;
+    grid-template-areas:
+      "checkbox-wrapper-1 checkbox-wrapper-2 checkbox-wrapper-4"
+      "checkbox-wrapper-3 checkbox-wrapper-3 checkbox-wrapper-3";
+  }
+  .checkbox-wrapper-1 { grid-area: checkbox-wrapper-1; }
+  .checkbox-wrapper-2 { grid-area: checkbox-wrapper-2; }
+  .checkbox-wrapper-3 { grid-area: checkbox-wrapper-3; }
+  .checkbox-wrapper-4 { grid-area: checkbox-wrapper-4; }
+
+  .checkbox-wrapper label {
+    line-height: 1;
+  }
+  .scoreWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+   .scores label {
+     background: white;
+   }
+   tr th,
+   tr td{
+     padding: 1px;
+   }
+
+   .scores label{
+     border: none;
+      }
+   .checkbox-wrapper{
+     display: inline;
+     max-width: 100%;
+   }
+   .checkbox-wrapper-1 label,
+   .checkbox-wrapper-2 label,
+   .checkbox-wrapper-4 label{
+     display: inline-block;
+   }
+   .scores input:checked +label{
+     border: 1px solid black;
+     border-radius: 10%;
+   }
+}
